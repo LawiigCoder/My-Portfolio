@@ -10,13 +10,11 @@
   --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   --neon-glow: 0 0 20px rgba(58, 134, 255, 0.3);
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: var(--dark);
@@ -26,20 +24,16 @@ body {
   padding-top: 80px;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
 }
-
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: #1a1a2e;
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 5px;
 }
-
 .navbar {
   background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(10px);
@@ -47,12 +41,10 @@ body {
   padding: 1rem 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .navbar.scrolled {
   padding: 0.5rem 0;
   box-shadow: var(--neon-glow);
 }
-
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 700;
@@ -61,7 +53,6 @@ body {
   -webkit-text-fill-color: transparent;
   position: relative;
 }
-
 .navbar-brand::after {
   content: '';
   position: absolute;
@@ -73,11 +64,9 @@ body {
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
-
 .navbar-brand:hover::after {
   transform: scaleX(1);
 }
-
 .nav-link {
   position: relative;
   margin: 0 0.5rem;
@@ -87,12 +76,10 @@ body {
   transition: all 0.3s ease;
   border-radius: 8px;
 }
-
 .nav-link.active {
   background: rgba(58, 134, 255, 0.2);
   box-shadow: 0 0 15px rgba(58, 134, 255, 0.3);
 }
-
 .nav-link.active::before {
   content: '';
   position: absolute;
@@ -105,12 +92,10 @@ body {
   border-radius: 8px;
   opacity: 0.3;
 }
-
 .nav-link:hover:not(.active) {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
-
 #home {
   min-height: 100vh;
   position: relative;
@@ -118,7 +103,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .hero-bg {
   position: absolute;
   top: 0;
@@ -129,7 +113,6 @@ body {
   background: radial-gradient(circle at 20% 50%, rgba(58, 134, 255, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 80% 20%, rgba(131, 56, 236, 0.1) 0%, transparent 50%);
 }
-
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -139,14 +122,12 @@ body {
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
 }
-
 .hero-subtitle {
   font-size: 1.5rem;
   color: #a5a5a5;
   margin-bottom: 2rem;
   max-width: 600px;
 }
-
 .hero-subtitle .text-primary {
   color: var(--primary) !important;
 }
@@ -154,17 +135,14 @@ body {
 .hero-subtitle .text-secondary {
   color: var(--secondary) !important;
 }
-
 .hero-subtitle .text-accent {
   color: var(--accent) !important;
 }
-
 .text-gradient {
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .btn-neon {
   background: var(--gradient);
   border: none;
@@ -179,13 +157,11 @@ body {
   text-decoration: none;
   display: inline-block;
 }
-
 .btn-neon:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(58, 134, 255, 0.6);
   color: white;
 }
-
 .btn-outline-neon {
   border: 2px solid var(--primary);
   color: var(--primary);
@@ -197,21 +173,18 @@ body {
   text-decoration: none;
   display: inline-block;
 }
-
 .btn-outline-neon:hover {
   background: var(--primary);
   color: white;
   transform: translateY(-3px);
   box-shadow: var(--neon-glow);
 }
-
 .profile-container {
   position: relative;
   width: 320px;
   height: 320px;
   margin: 0 auto;
 }
-
 .profile-img1 {
   width: 120%;
   height: 120%;
@@ -234,7 +207,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 .profile-glow {
   position: absolute;
   width: 110%;
@@ -247,17 +219,14 @@ body {
   filter: blur(20px);
   animation: pulse 2s ease-in-out infinite alternate;
 }
-
 @keyframes pulse {
   0% { transform: scale(1); opacity: 0.3; }
   100% { transform: scale(1.1); opacity: 0.5; }
 }
-
 section {
   padding: 100px 0;
   position: relative;
 }
-
 .section-title {
   font-size: 2.8rem;
   font-weight: 800;
@@ -269,7 +238,6 @@ section {
   position: relative;
   display: inline-block;
 }
-
 .section-title::after {
   content: '';
   position: absolute;
@@ -281,7 +249,6 @@ section {
   transform: translateX(-50%);
   border-radius: 2px;
 }
-
 .glass-card {
   background: var(--glass);
   backdrop-filter: blur(10px);
@@ -291,163 +258,123 @@ section {
   transition: all 0.4s ease;
   height: 100%;
 }
-
 .glass-card:hover {
   transform: translateY(-8px);
   border-color: var(--primary);
   box-shadow: var(--neon-glow);
 }
-
 .skill-icon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: inline-block;
 }
-
-/* Programming Languages Colors */
 .html-color {
-  color: #E34F26 !important; /* HTML5 Official Red */
+  color: #E34F26 !important;
 }
-
 .css-color {
-  color: #1572B6 !important; /* CSS3 Official Blue */
+  color: #1572B6 !important; 
 }
-
 .js-color {
-  color: #F7DF1E !important; /* JavaScript Yellow */
+  color: #F7DF1E !important; 
 }
-
 .python-color {
-  color: #3776AB !important; /* Python Blue */
+  color: #3776AB !important;
 }
-
 .java-color {
-  color: #007396 !important; /* Java Blue */
+  color: #007396 !important;
 }
-
 .c-color {
-  color: #A8B9CC !important; /* C Light Blue */
+  color: #A8B9CC !important; 
 }
-
 .cpp-color {
-  color: #00599C !important; /* C++ Blue */
+  color: #00599C !important; 
 }
-
 .csharp-color {
-  color: #239120 !important; /* C# Green */
+  color: #239120 !important; 
 }
-
 .php-color {
-  color: #777BB4 !important; /* PHP Purple */
+  color: #777BB4 !important; 
 }
-
 .ruby-color {
-  color: #CC342D !important; /* Ruby Red */
+  color: #CC342D !important; 
 }
-
 .swift-color {
-  color: #FA7343 !important; /* Swift Orange */
+  color: #FA7343 !important; 
 }
-
 .kotlin-color {
-  color: #7F52FF !important; /* Kotlin Purple */
+  color: #7F52FF !important; 
 }
-
 .go-color {
-  color: #00ADD8 !important; /* Go Blue */
+  color: #00ADD8 !important; 
 }
-
 .rust-color {
-  color: #000000 !important; /* Rust Black */
+  color: #000000 !important; 
 }
-
-/* Tools & Technologies Colors */
 .git-color {
-  color: #F05032 !important; /* Git Orange-Red */
+  color: #F05032 !important; 
 }
-
 .github-color {
-  color: #181717 !important; /* GitHub Black */
+  color: #181717 !important; 
 }
-
 .linux-color {
-  color: #FCC624 !important; /* Linux Yellow */
+  color: #FCC624 !important; 
 }
-
 .windows-color {
-  color: #0078D6 !important; /* Windows Blue */
+  color: #0078D6 !important; 
 }
-
 .mysql-color {
-  color: #4479A1 !important; /* MySQL Blue */
+  color: #4479A1 !important; 
 }
-
 .postgresql-color {
-  color: #336791 !important; /* PostgreSQL Blue */
+  color: #336791 !important; 
 }
-
 .mongodb-color {
-  color: #47A248 !important; /* MongoDB Green */
+  color: #47A248 !important; 
 }
-
 .bootstrap-color {
-  color: #7952B3 !important; /* Bootstrap Purple */
+  color: #7952B3 !important; 
 }
-
 .nodejs-color {
-  color: #339933 !important; /* Node.js Green */
+  color: #339933 !important; 
 }
-
 .react-color {
-  color: #61DAFB !important; /* React Cyan */
+  color: #61DAFB !important; 
 }
-
 .angular-color {
-  color: #DD0031 !important; /* Angular Red */
+  color: #DD0031 !important; 
 }
-
 .vue-color {
-  color: #4FC08D !important; /* Vue Green */
+  color: #4FC08D !important; 
 }
-
 .vscode-color {
-  color: #007ACC !important; /* VS Code Blue */
+  color: #007ACC !important; 
 }
-
 .arduino-color {
-  color: #00979D !important; /* Arduino Teal */
+  color: #00979D !important; 
 }
-
 .embedded-color {
-  color: #8A2BE2 !important; /* Embedded Systems Purple */
+  color: #8A2BE2 !important; 
 }
-
 .django-color {
-  color: #092E20 !important; /* Django Dark Green */
+  color: #092E20 !important; 
 }
-
 .flask-color {
-  color: #000000 !important; /* Flask Black */
+  color: #000000 !important; 
 }
-
 .aws-color {
-  color: #FF9900 !important; /* AWS Orange */
+  color: #FF9900 !important;
 }
-
 .docker-color {
-  color: #2496ED !important; /* Docker Blue */
+  color: #2496ED !important; 
 }
-
 .kubernetes-color {
-  color: #326CE5 !important; /* Kubernetes Blue */
+  color: #326CE5 !important; 
 }
-
 .skill-section-title {
   color: var(--primary) !important;
   font-weight: 600;
   margin-bottom: 2rem;
 }
-
 .experience-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -458,7 +385,6 @@ section {
   position: relative;
   overflow: hidden;
 }
-
 .experience-card::before {
   content: '';
   position: absolute;
@@ -468,13 +394,11 @@ section {
   height: 100%;
   background: var(--gradient);
 }
-
 .experience-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary);
   box-shadow: 0 10px 30px rgba(58, 134, 255, 0.2);
 }
-
 .experience-header {
   display: flex;
   justify-content: space-between;
@@ -483,33 +407,28 @@ section {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 .experience-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-
 .experience-company {
   color: var(--primary);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
-
 .experience-date {
   background: rgba(58, 134, 255, 0.2);
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
 }
-
 .experience-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 1rem;
 }
-
 .experience-badge {
   background: rgba(58, 134, 255, 0.15);
   color: #8bb9ff;
@@ -517,7 +436,6 @@ section {
   border-radius: 15px;
   font-size: 0.85rem;
 }
-
 .project-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -526,13 +444,11 @@ section {
   transition: all 0.3s ease;
   height: 100%;
 }
-
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary);
   box-shadow: 0 10px 30px rgba(58, 134, 255, 0.2);
 }
-
 .simple-contact-info {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -540,7 +456,6 @@ section {
   padding: 2rem;
   margin-bottom: 2rem;
 }
-
 .contact-item {
   display: flex;
   align-items: center;
@@ -549,30 +464,25 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
-
 .contact-item:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
 }
-
 .contact-item.clickable-contact {
   cursor: pointer;
   position: relative;
 }
-
 .contact-item.clickable-contact:hover {
   background: rgba(58, 134, 255, 0.1);
   border-radius: 10px;
   padding: 1.5rem;
   transform: translateY(-3px);
 }
-
 .contact-item.clickable-contact:hover .contact-icon {
   background: rgba(58, 134, 255, 0.2);
   transform: scale(1.1);
 }
-
 .contact-icon {
   width: 50px;
   height: 50px;
@@ -586,23 +496,19 @@ section {
   color: var(--primary);
   transition: all 0.3s ease;
 }
-
 .contact-details h4 {
   margin-bottom: 0.5rem;
   color: var(--primary);
 }
-
 .contact-details p {
   color: #a5a5a5;
   margin-bottom: 0;
 }
-
 .contact-value {
   font-weight: 500;
   color: #fff !important;
   font-size: 1.1rem;
 }
-
 .click-hint {
   font-size: 0.8rem;
   color: var(--primary) !important;
@@ -610,14 +516,12 @@ section {
   opacity: 0.8;
   font-style: italic;
 }
-
 .social-links {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
 }
-
 .social-link {
   width: 48px;
   height: 48px;
@@ -632,7 +536,6 @@ section {
   transition: all 0.3s ease;
   text-decoration: none;
 }
-
 .social-link:hover {
   transform: translateY(-5px);
   background: var(--primary);
@@ -640,18 +543,14 @@ section {
   box-shadow: var(--neon-glow);
   color: white;
 }
-
 footer {
   background: rgba(18, 18, 18, 0.9);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-/* Devicons styling */
 .devicon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
-
 .devicon-html5-plain,
 .devicon-css3-plain,
 .devicon-javascript-plain,
@@ -673,82 +572,65 @@ footer {
 .devicon-react-original {
   color: inherit !important;
 }
-
 @media (max-width: 992px) {
   .hero-title {
     font-size: 2.8rem;
   }
-  
   .section-title {
     font-size: 2.5rem;
   }
-  
   .devicon {
     font-size: 2.5rem;
   }
 }
-
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.3rem;
   }
-  
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
   .section-title {
     font-size: 2.2rem;
   }
-  
   .profile-container {
     width: 260px;
     height: 260px;
   }
-  
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
   .btn-neon, .btn-outline-neon {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-  
   .contact-item {
     flex-direction: column;
     text-align: center;
   }
-  
   .contact-icon {
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  
   .devicon {
     font-size: 2.2rem;
   }
 }
-
 @media (max-width: 576px) {
   .hero-title {
     font-size: 2rem;
   }
-  
   .section-title {
     font-size: 1.8rem;
   }
-  
   .profile-container {
     width: 220px;
     height: 220px;
   }
-  
   .glass-card, .experience-card, .project-card, .simple-contact-info {
     padding: 1.5rem;
   }
-  
   .devicon {
     font-size: 1.8rem;
   }

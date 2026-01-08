@@ -5,10 +5,8 @@ window.addEventListener('scroll', function() {
   } else {
     nav.classList.remove('scrolled');
   }
-  
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
-  
   let current = '';
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
@@ -17,7 +15,6 @@ window.addEventListener('scroll', function() {
       current = section.getAttribute('id');
     }
   });
-  
   navLinks.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href') === '#' + current) {
@@ -25,7 +22,6 @@ window.addEventListener('scroll', function() {
     }
   });
 });
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -43,20 +39,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.getElementById('navContent');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        if (navbarToggler) {
+          navbarToggler.click();
+        }
+      }
+    });
+  });
   const clickableContacts = document.querySelectorAll('.clickable-contact');
-  
   clickableContacts.forEach(contact => {
     contact.addEventListener('click', function() {
       const type = this.getAttribute('data-type');
       const value = this.getAttribute('data-value');
-      
       switch(type) {
         case 'email':
           window.location.href = `mailto:${value}`;
           break;
-          
         case 'phone':
           if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             window.location.href = `tel:${value}`;
@@ -74,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
   function showNotification(message) {
     const notification = document.createElement('div');
     notification.className = 'notification';
@@ -91,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
       animation: slideIn 0.3s ease;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     `;
-    
     const style = document.createElement('style');
     style.textContent = `
       @keyframes slideIn {
@@ -104,9 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     `;
     document.head.appendChild(style);
-    
     document.body.appendChild(notification);
-    
     setTimeout(() => {
       notification.style.animation = 'slideOut 0.3s ease';
       setTimeout(() => {
@@ -116,34 +116,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 300);
     }, 3000);
   }
-  
   document.querySelector('a[href="#home"]').classList.add('active');
-  
   const animateOnScroll = function() {
     const elements = document.querySelectorAll('.experience-card, .project-card, .glass-card');
-    
     elements.forEach(element => {
       const elementTop = element.getBoundingClientRect().top;
       const elementVisible = 150;
-      
       if (elementTop < window.innerHeight - elementVisible) {
         element.style.opacity = "1";
         element.style.transform = "translateY(0)";
       }
     });
   };
-  
   const animatedElements = document.querySelectorAll('.experience-card, .project-card, .glass-card');
   animatedElements.forEach(element => {
     element.style.opacity = "0";
     element.style.transform = "translateY(20px)";
     element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
   });
-  
   window.addEventListener('scroll', animateOnScroll);
   animateOnScroll();
-  
-  // Add smooth hover effects for skill cards
   const skillCards = document.querySelectorAll('.glass-card');
   skillCards.forEach(card => {
     card.addEventListener('mouseenter', function() {
@@ -153,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
         icon.style.transition = 'transform 0.3s ease';
       }
     });
-    
     card.addEventListener('mouseleave', function() {
       const icon = this.querySelector('.skill-icon i');
       if (icon) {
@@ -162,5 +153,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
 document.getElementById('year').textContent = new Date().getFullYear();
